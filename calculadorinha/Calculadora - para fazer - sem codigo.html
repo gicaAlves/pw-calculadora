@@ -4,7 +4,7 @@
   <meta name="author" content="Giovanna Alves (Gica)"/>
   <meta name="description" content="Atividade PWII - Calculadora em HTML, CSS e JavaScript"/>
 	<head>
-		<title>Calculadora</title>
+		<title>Calculadorinha</title>
 
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
@@ -61,35 +61,35 @@
             <input type="text" id="visor" class="form-control resultado" placeholder="0" disabled="disabled" />
             
             <div class="row">
-              <button type="button" class="btn btn-dark btn-lg clear font-weight-light">C</button>
-              <button type="button" class="btn btn-dark btn-lg font-weight-light">/</button>
-              <button type="button" class="btn btn-dark btn-lg font-weight-light">x</button>
+              <button onclick = "limpezatotal()" type="button" class="btn btn-dark btn-lg clear font-weight-light">C</button>
+              <button onclick = "adicionae('/')" type="button" class="btn btn-dark btn-lg font-weight-light">/</button>
+              <button onclick = "adicionae('*')" type="button" class="btn btn-dark btn-lg font-weight-light">x</button>
             </div>
 
             <div class="row">
-              <button type="button" class="btn btn-dark btn-lg font-weight-light">7</button>
-              <button type="button" class="btn btn-dark btn-lg font-weight-light">8</button>
-              <button type="button" class="btn btn-dark btn-lg font-weight-light">9</button>
-              <button type="button" class="btn btn-dark btn-lg font-weight-light">-</button>
+              <button onclick = "adicionae(7)" type="button" class="btn btn-dark btn-lg font-weight-light">7</button>
+              <button onclick = "adicionae(8)" type="button" class="btn btn-dark btn-lg font-weight-light">8</button>
+              <button onclick = "adicionae(9)" type="button" class="btn btn-dark btn-lg font-weight-light">9</button>
+              <button onclick = "adicionae('-')" type="button" class="btn btn-dark btn-lg font-weight-light">-</button>
             </div>
             
             <div class="row">
-              <button type="button" class="btn btn-dark btn-lg font-weight-light">4</button>
-              <button type="button" class="btn btn-dark btn-lg font-weight-light">5</button>
-              <button type="button" class="btn btn-dark btn-lg font-weight-light">6</button>
-              <button type="button" class="btn btn-dark btn-lg font-weight-light">+</button>
+              <button onclick = "adicionae(4)" type="button" class="btn btn-dark btn-lg font-weight-light">4</button>
+              <button onclick = "adicionae(5)" type="button" class="btn btn-dark btn-lg font-weight-light">5</button>
+              <button onclick = "adicionae(6)" type="button" class="btn btn-dark btn-lg font-weight-light">6</button>
+              <button onclick = "adicionae('+')" type="button" class="btn btn-dark btn-lg font-weight-light">+</button>
             </div>
 
             <div class="row">
-              <button type="button" class="btn btn-dark btn-lg font-weight-light">1</button>
-              <button type="button" class="btn btn-dark btn-lg font-weight-light">2</button>
-              <button type="button" class="btn btn-dark btn-lg font-weight-light">3</button>
-              <button type="button" class="btn btn-dark btn-lg enter">=</button>
+              <button onclick = "adicionae(1)" type="button" class="btn btn-dark btn-lg font-weight-light">1</button>
+              <button onclick = "adicionae(2)" type="button" class="btn btn-dark btn-lg font-weight-light">2</button>
+              <button onclick = "adicionae(3)" type="button" class="btn btn-dark btn-lg font-weight-light">3</button>
+              <button onclick = "calculari()"  type="button" class="btn btn-dark btn-lg enter">=</button>
             </div>
 
             <div class="row" style="margin-top: -60px">
-              <button type="button" class="btn btn-dark zero btn-lg font-weight-light">0</button>
-              <button type="button" class="btn btn-dark btn-lg font-weight-light">.</button>
+              <button onclick = "adicionae(0)"   type="button" class="btn btn-dark zero btn-lg font-weight-light">0</button>
+              <button onclick = "adicionae('.')" type="button" class="btn btn-dark btn-lg font-weight-light">.</button>
             </div>
 
           </div>
@@ -97,8 +97,25 @@
       </div>
     </div> 
 
+    <script>
+      // pegar o elemento do visor
+      var visor = document.getElementById("visor");
 
+      // quando uma tecla for pressionada, seu valor vai pro visor
+      function adicionae(tecla) {
+        visor.value = visor.value + tecla;
+      }
 
+      // quando o "c" for pressionado limpa o visor
+      function limpezatotal() {
+        visor.value = "";
+        alert("PRA CIMA! 🤪⏫");
+      }
+
+      // quando o "=" for pressionado calcula
+      function calculari() {
+        visor.value = eval(visor.value);
+      }
+    </script>
   </body>	
-
 </html>
