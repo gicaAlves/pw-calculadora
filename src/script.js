@@ -10,7 +10,7 @@
  // quando o "c" for pressionado limpa o visor
  function limpezatotal() {
    visor.value = "";
-   alert("PRA CIMA! 🤪⏫");
+   alert("Apagando... ✨");
  }
 
  // quando o "=" for pressionado calcula
