@@ -1,0 +1,86 @@
+<html>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="content-language" content="pt-br" />
+<meta name="author" content="Giovanna Alves (Gica)" />
+<meta name="description" content="Atividade PWII - Calculadora em HTML, CSS e JavaScript" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<link rel="stylesheet" href="style.css" />
+<title>Calculadorinha</title>
+
+<link rel="shortcut icon" href="/calculator.png" type="image/x-icon" />
+
+<head>
+
+  <!-- Latest compiled and minified CSS -->
+  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">-->
+
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col d-flex justify-content-center">
+
+
+        <div class="main">
+          <form action="" name="Calculadorinha">
+            <input type="text" id="visor" class="form-control visor" placeholder="0" disabled="disabled" />
+
+            <div class="row">
+              <button onclick="limpezatotal()" type="button"
+                class="btn btn-dark btn-lg font-weight-light clear">C</button>
+              <button onclick="adicionae('/')" type="button"
+                class="btn btn-dark btn-lg font-weight-light barra">/</button>
+              <button onclick="adicionae('*')" type="button"
+                class="btn btn-dark btn-lg font-weight-light multi">x</button>
+            </div>
+
+            <div class="row">
+              <button onclick="adicionae(7)" type="button" class="btn btn-dark btn-lg font-weight-light">7</button>
+              <button onclick="adicionae(8)" type="button" class="btn btn-dark btn-lg font-weight-light">8</button>
+              <button onclick="adicionae(9)" type="button" class="btn btn-dark btn-lg font-weight-light">9</button>
+              <button onclick="adicionae('-')" type="button"
+                class="btn btn-dark btn-lg font-weight-light menos">-</button>
+            </div>
+
+            <div class="row">
+              <button onclick="adicionae(4)" type="button" class="btn btn-dark btn-lg font-weight-light">4</button>
+              <button onclick="adicionae(5)" type="button" class="btn btn-dark btn-lg font-weight-light">5</button>
+              <button onclick="adicionae(6)" type="button" class="btn btn-dark btn-lg font-weight-light">6</button>
+              <button onclick="adicionae('+')" type="button"
+                class="btn btn-dark btn-lg font-weight-light mais">+</button>
+            </div>
+
+            <div style="display: flex;">
+              <div>
+                <div class="row">
+                  <button onclick="adicionae(1)" type="button" class="btn btn-dark btn-lg font-weight-light">1</button>
+                  <button onclick="adicionae(2)" type="button" class="btn btn-dark btn-lg font-weight-light">2</button>
+                  <button onclick="adicionae(3)" type="button" class="btn btn-dark btn-lg font-weight-light">3</button>
+                </div>
+
+
+                <div class="row">
+                  <button onclick="adicionae(0)" type="button"
+                    class="btn btn-dark zero btn-lg font-weight-light">0</button>
+                  <button onclick="adicionae('.')" type="button"
+                    class="btn btn-dark btn-lg font-weight-light ponto">.</button>
+                </div>
+              </div>
+              <div>
+                <button onclick="calculari()" type="button" class="btn btn-dark btn-lg igual">=</button>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+
+
+</body>
+
+</html>
