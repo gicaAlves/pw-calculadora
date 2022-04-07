@@ -1,7 +1,8 @@
-/*@font-face {
+@font-face {
         font-family: internet_friends;
         src: url(/Internet\Friends.ttf);
-    }*/
+}
+
     body{
         display: flex;
         align-items: center;
